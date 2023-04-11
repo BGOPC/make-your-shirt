@@ -13,6 +13,7 @@
   "plugins": ["react"],
   "rules": {
     "brace-style": ["warn", "stroustrup", { "allowSingleLine": true }],
+    "require-jsdoc":"off",
     "quotes": "off",
     "comma-dangle": ["error", "always-multiline"],
     "comma-spacing": "error",
