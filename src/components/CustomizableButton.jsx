@@ -2,7 +2,7 @@ import React from 'react';
 import state from "../store/index.js";
 import { useSnapshot } from "valtio";
 
-const CustomizeRedirectButton = ({ type, title, handleClick, styles }) => {
+const CustomizableButton = ({ type, title, handleClick, styles }) => {
   const snap = useSnapshot(state);
   // eslint-disable-next-line no-shadow
   const generateStyle = (type) => {
@@ -24,4 +24,4 @@ const CustomizeRedirectButton = ({ type, title, handleClick, styles }) => {
   );
 };
 
-export default CustomizeRedirectButton;
+export default CustomizableButton;

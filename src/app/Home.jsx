@@ -8,7 +8,7 @@ import {
   slideAnimation,
 } from '../config/motion.js';
 import state from '../store';
-import CustomizeRedirectButton from "../components/CustomizeRedirectButton.jsx";
+import { CustomizableButton } from "../components/";
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -35,7 +35,7 @@ const Home = () => {
                 <b>Unleash Your <i>Imagination</i></b> and define your own
                 style.
               </p>
-              <CustomizeRedirectButton
+              <CustomizableButton
                 type="filled"
                 title="Customize It"
                 handleClick={() => state.intro = false}
