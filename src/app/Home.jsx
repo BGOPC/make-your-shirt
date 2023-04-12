@@ -21,10 +21,19 @@ const Home = () => {
           </motion.header>
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
-              <h1 className='head-text'>
-                LET'S <br className='xl:block hidden'/> DO IT
+              <h1 className="head-text">
+                LET'S <br className="xl:block hidden"/> DO IT
 
               </h1>
+            </motion.div>
+            <motion.div
+              className="flex flex-col gap-5" {...headContentAnimation}>
+              <p className="max-w-md font-normal text-gray-600 text-base">
+                Create Your Unique And Desire Shirt with our Brand-new 3D
+                customization tool <br className="xl:block hidden"/>
+                <b>Unleash Your <i>Imagination</i></b> and define your own
+                style.
+              </p>
             </motion.div>
           </motion.div>
         </motion.section>
