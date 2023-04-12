@@ -1,10 +1,15 @@
 import React from "react";
+import Canvas from "./canvas";
+import Home from "./app/Home";
+import Customizer from "./app/Customizer";
 
 function App() {
   return (
-    <div>
-      <h1 className="head-text">Make Your TShirt</h1>
-    </div>
+    <main className="app transition-all ease-in">
+      <Home />
+      <Canvas />
+      <Customizer />
+    </main>
   );
 }
 
