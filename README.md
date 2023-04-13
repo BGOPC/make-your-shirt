@@ -11,3 +11,10 @@ I'm using React and three.js to make a website which let you customize the image
 #### Thanks To [Javascript Mastery](https://www.youtube.com/@javascriptmastery)
 
 [Video Tutorial](https://www.youtube.com/watch?v=ZqEa8fTxypQ&ab_channel=JavaScriptMastery)
+
+
+## Screen Shots
+
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
