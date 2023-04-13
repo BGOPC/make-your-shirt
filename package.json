@@ -8,6 +8,8 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "author": "BGOPC",
+  "license": "MIT",
   "dependencies": {
     "@react-three/drei": "^9.65.2",
     "@react-three/fiber": "^8.12.0",
