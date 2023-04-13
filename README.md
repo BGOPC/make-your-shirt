@@ -7,6 +7,8 @@ It's one of those kinds
 
 I'm using React and three.js to make a website which let you customize the image models and create your desire T-Shirt
 
+##### Using Ai
+if you wanna use AO prompting, etc, You should run the [backend](https://github.com/BGOPC/make-your-shirt-backend) first
 
 #### Thanks To [Javascript Mastery](https://www.youtube.com/@javascriptmastery)
 
