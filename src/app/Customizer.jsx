@@ -17,6 +17,17 @@ import {
 
 const Customizer = () => {
   const snap = useSnapshot(state);
+  const [file, setfile] = useState('');
+  const [prompt, setprompt] = useState('');
+  const [generatingImg, setgeneratingImg] = useState(false);
+  const [activeEditorTab, setactiveEditorTab] = useState('');
+  const [activeFilterTab, setactiveFilterTab] = useState({
+    logoShirt: true,
+    stylishShirt: false,
+  });
+  const generateTabContent = () => {
+  };
+
   return (
     <AnimatePresence>
       {!snap.intro && (
