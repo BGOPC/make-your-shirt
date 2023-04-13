@@ -15,6 +15,6 @@ I'm using React and three.js to make a website which let you customize the image
 
 ## Screen Shots
 
-![img.png](img.png)
-![img_1.png](img_1.png)
-![img_2.png](img_2.png)
+![img.png](Screenshots/img.png)
+![img_1.png](Screenshots/img_1.png)
+![img_2.png](Screenshots/img_2.png)
