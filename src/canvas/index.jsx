@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, Center } from "@react-three/drei";
 import Shirt from "./Shirt.jsx";
 import Backdrop from "./Backdrop.jsx";
-import cameraRig from "./CameraRig.jsx";
 import CameraRig from "./CameraRig.jsx";
 
 const CanvasModel = () => {
