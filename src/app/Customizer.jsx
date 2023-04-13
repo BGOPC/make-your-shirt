@@ -17,11 +17,11 @@ import {
 
 const Customizer = () => {
   const snap = useSnapshot(state);
-  const [file, setfile] = useState('');
-  const [prompt, setprompt] = useState('');
-  const [generatingImg, setgeneratingImg] = useState(false);
-  const [activeEditorTab, setactiveEditorTab] = useState('');
-  const [activeFilterTab, setactiveFilterTab] = useState({
+  const [file, setFile] = useState('');
+  const [prompt, setPrompt] = useState('');
+  const [generatingImg, setGeneratingImg] = useState(false);
+  const [activeEditorTab, setActiveEditorTab] = useState('');
+  const [activeFilterTab, setActiveFilterTab] = useState({
     logoShirt: true,
     stylishShirt: false,
   });
@@ -30,14 +30,47 @@ const Customizer = () => {
       case "colorpicker":
         return <ColorPicker/>;
       case "filepicker":
-        return <FilePicker/>;
+        return <FilePicker
+          file={file}
+          setFile={setFile}
+          readFile={readFile}
+        />;
       case "aipicker":
         return <AiPicker/>;
       default:
         return null;
     }
   };
+  const handleDecals = (type, result) => {
+    const decalType = DecalTypes[type];
+    state[decalType.stateProperty] = result;
 
+    if (!activeFilterTab[decalType.filterTab]) {
+      handleActiveFilterTab(decalType.filterTab);
+    }
+  };
+
+  const handleActiveFilterTab = (tabName) => {
+    switch (tabName) {
+      case "logo":
+        state.isLogoTexture = !activeFilterTab[tabName];
+        break;
+      case "stylishShirt":
+        state.isFullTexture = !activeFilterTab[tabName];
+        break;
+      default:
+        state.isLogoTexture = true;
+        state.isFullTexture = false;
+        break;
+    }
+  };
+  const readFile = (type) => {
+    reader(file)
+        .then((result) => {
+          handleDecals(type, result);
+          setActiveEditorTab('');
+        });
+  };
   return (
     <AnimatePresence>
       {!snap.intro && (
@@ -53,7 +86,7 @@ const Customizer = () => {
                   key={tab.name}
                   tab={tab}
                   handleClick={() => {
-                    setactiveEditorTab(tab.name);
+                    setActiveEditorTab(tab.name);
                   }}
                 />)}
 
