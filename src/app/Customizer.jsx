@@ -26,6 +26,16 @@ const Customizer = () => {
     stylishShirt: false,
   });
   const generateTabContent = () => {
+    switch (activeEditorTab) {
+      case "colorpicker":
+        return <ColorPicker/>;
+      case "filepicker":
+        return <FilePicker/>;
+      case "aipicker":
+        return <AiPicker/>;
+      default:
+        return null;
+    }
   };
 
   return (
@@ -43,8 +53,13 @@ const Customizer = () => {
                   key={tab.name}
                   tab={tab}
                   handleClick={() => {
+                    setactiveEditorTab(tab.name);
                   }}
                 />)}
+
+                {
+                  generateTabContent()
+                }
               </div>
             </div>
           </motion.div>
