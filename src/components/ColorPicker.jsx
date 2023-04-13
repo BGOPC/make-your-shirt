@@ -13,6 +13,20 @@ const ColorPicker = () => {
         onChange={(color) => {
           state.color = color.hex;
         }}
+        presetColors={[
+          '#31c4b6',
+          '#7120d4',
+          '#9988c2',
+          '#28b083',
+          '#09e39a',
+          '#dbbf30',
+          '#3b3bcc',
+          '#a14a7f',
+          '#9e3feb',
+          '#9ceb52',
+          '#e61037',
+          '#c4661d',
+        ]}
         disableAlpha
       />
     </div>
