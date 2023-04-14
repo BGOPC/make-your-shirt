@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 html {
-  font-family: "Inter", sans-serif;
+  font-family: "Vazir", "Inter", sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
