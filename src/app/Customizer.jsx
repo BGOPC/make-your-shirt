@@ -71,9 +71,11 @@ const Customizer = () => {
       const data = await response.json();
 
       handleDecals(type, `data:image/png;base64,${data.photo}`);
-    } catch (error) {
+    }
+    catch (error) {
       alert(error);
-    } finally {
+    }
+    finally {
       setGeneratingImg(false);
       setActiveEditorTab("");
     }
@@ -115,10 +117,10 @@ const Customizer = () => {
 
   const readFile = (type) => {
     reader(file)
-      .then((result) => {
-        handleDecals(type, result);
-        setActiveEditorTab("");
-      });
+        .then((result) => {
+          handleDecals(type, result);
+          setActiveEditorTab("");
+        });
   };
 
   return (
