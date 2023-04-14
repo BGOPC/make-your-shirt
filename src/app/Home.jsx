@@ -60,12 +60,37 @@ const Home = () => {
                   و استایل خودتو بساز.
                 </p>)
               }
-              <CustomizableButton
-                type="filled"
-                title="تغییرش بده"
-                handleClick={() => (state.intro = false)}
-                styles="w-fit px-4 py-2.5 font-bold text-sm"
-              />
+              {!snap.translation ? (
+                <>
+                  <CustomizableButton
+                    type="filled"
+                    title="Customize It"
+                    handleClick={() => (state.intro = false)}
+                    styles="w-fit px-4 py-2.5 font-bold text-sm"
+                  />
+                  <CustomizableButton
+                    type="filled"
+                    title="Translate  "
+                    handleClick={() => (state.translation = true)}
+                    styles="w-fit px-4 py-2.5 font-bold text-sm"
+                  />
+                </>
+              ) : (
+                <>
+                  <CustomizableButton
+                    type="filled"
+                    title="تغییرش بده"
+                    handleClick={() => (state.intro = false)}
+                    styles="w-fit px-4 py-2.5 font-bold text-sm"
+                  />
+                  <CustomizableButton
+                    type="filled"
+                    title="ترجمه"
+                    handleClick={() => (state.translation = false)}
+                    styles="w-fit px-4 py-2.5 font-bold text-sm"
+                  />
+                </>
+              )}
             </motion.div>
           </motion.div>
         </motion.section>
