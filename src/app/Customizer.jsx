@@ -71,11 +71,9 @@ const Customizer = () => {
       const data = await response.json();
 
       handleDecals(type, `data:image/png;base64,${data.photo}`);
-    }
-    catch (error) {
+    } catch (error) {
       alert(error);
-    }
-    finally {
+    } finally {
       setGeneratingImg(false);
       setActiveEditorTab("");
     }
@@ -117,10 +115,10 @@ const Customizer = () => {
 
   const readFile = (type) => {
     reader(file)
-        .then((result) => {
-          handleDecals(type, result);
-          setActiveEditorTab("");
-        });
+      .then((result) => {
+        handleDecals(type, result);
+        setActiveEditorTab("");
+      });
   };
 
   return (
@@ -152,19 +150,37 @@ const Customizer = () => {
             {...fadeAnimation}
           >
             {!snap.translation ? (
-              <CustomizableButton
-                type="filled"
-                title="Go Back"
-                handleClick={() => state.intro = true}
-                customStyles="w-fit px-4 py-2.5 font-bold text-sm"
-              />
+              <>
+                <CustomizableButton
+                  type="filled"
+                  title="Translate  "
+                  handleClick={() => (state.translation = true)}
+                  styles="w-fit my-1 px-4 py-2.5 font-bold text-sm"
+                />
+                <br/>
+                <CustomizableButton
+                  type="filled"
+                  title="Go Back"
+                  handleClick={() => state.intro = true}
+                  styles="w-fit my-1 px-4 py-2.5 font-bold text-sm"
+                />
+              </>
             ) : (
-              <CustomizableButton
-                type="filled"
-                title="برگرد"
-                handleClick={() => state.intro = true}
-                customStyles="w-fit px-4 py-2.5 font-bold text-sm"
-              />
+              <>
+                <CustomizableButton
+                  type="filled"
+                  title="ترجمه"
+                  handleClick={() => (state.translation = false)}
+                  styles="w-fit my-1 px-4 py-2.5 font-bold text-sm"
+                />
+                <br/>
+                <CustomizableButton
+                  type="filled"
+                  title="برگرد"
+                  handleClick={() => state.intro = true}
+                  styles="w-fit my-1 px-4 py-2.5 font-bold text-sm"
+                />
+              </>
             )}
           </motion.div>
 
@@ -181,11 +197,11 @@ const Customizer = () => {
                 handleClick={() => handleActiveFilterTab(tab.name)}
               />
             ))}
-            <button className='download-btn' onClick={downloadCanvasToImage}>
+            <button className="download-btn" onClick={downloadCanvasToImage}>
               <img
                 src={download}
-                alt='download_image'
-                className='w-3/5 h-3/5 object-contain'
+                alt="download_image"
+                className="w-3/5 h-3/5 object-contain"
               />
             </button>
           </motion.div>
