@@ -3,11 +3,14 @@
 Have you seen those fancy websites which let you customize image models,
 It's one of those kinds
 
+But, You can use Ai to generate images which is a unique kind
+Also, Localization Added(Feel free to add your language, create pr, i'll respond in a day)
+
 ## React And Three.js
 
 I'm using React and three.js to make a website which let you customize the image models and create your desire T-Shirt
 
-##### Using Ai
+### Using Ai
 
 if you wanna use AI prompting, etc, You should run the [backend](https://github.com/BGOPC/make-your-shirt-backend) first
 
