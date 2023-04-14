@@ -8,12 +8,22 @@ It's one of those kinds
 I'm using React and three.js to make a website which let you customize the image models and create your desire T-Shirt
 
 ##### Using Ai
+
 if you wanna use AI prompting, etc, You should run the [backend](https://github.com/BGOPC/make-your-shirt-backend) first
 
 #### Thanks To [Javascript Mastery](https://www.youtube.com/@javascriptmastery)
 
 [Video Tutorial](https://www.youtube.com/watch?v=ZqEa8fTxypQ&ab_channel=JavaScriptMastery)
 
+##### Difference Between this and the youtube code(Not Done)
+
+Localization: Switch language between Persian and English
+
+changing the Shirt View: Changing the Camera Position, FOV
+
+changing logo placement: moving logo up/down/left/right
+
+adding a text instead of the logo
 
 ## Screen Shots
 
