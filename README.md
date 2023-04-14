@@ -33,3 +33,4 @@ adding a text instead of the logo
 ![img.png](Screenshots/img.png)
 ![img_1.png](Screenshots/img_1.png)
 ![img_2.png](Screenshots/img_2.png)
+![img_3.png](Screenshots/img_3.png)
