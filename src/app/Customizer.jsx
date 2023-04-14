@@ -151,12 +151,21 @@ const Customizer = () => {
             className="absolute z-10 top-5 right-5"
             {...fadeAnimation}
           >
-            <CustomizableButton
-              type="filled"
-              title="Go Back"
-              handleClick={() => state.intro = true}
-              customStyles="w-fit px-4 py-2.5 font-bold text-sm"
-            />
+            {!snap.translation ? (
+              <CustomizableButton
+                type="filled"
+                title="Go Back"
+                handleClick={() => state.intro = true}
+                customStyles="w-fit px-4 py-2.5 font-bold text-sm"
+              />
+            ) : (
+              <CustomizableButton
+                type="filled"
+                title="برگرد"
+                handleClick={() => state.intro = true}
+                customStyles="w-fit px-4 py-2.5 font-bold text-sm"
+              />
+            )}
           </motion.div>
 
           <motion.div
